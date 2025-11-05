@@ -1,0 +1,43 @@
+version: "3.1"
+stories:
+- story: greet
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: check balance
+  steps:
+    - intent: check_balance
+    - action: action_check_balance
+
+- story: check balance with account type
+  steps:
+    - intent: check_balance
+      entities:
+      - account_type: "checking"
+    - action: action_check_balance
+
+- story: get transactions
+  steps:
+    - intent: get_transactions
+    - action: action_get_transactions
+
+- story: transfer money
+  steps:
+    - intent: transfer_money
+    - action: action_transfer_money
+
+- story: analyze spending
+  steps:
+    - intent: analyze_spending
+    - action: action_analyze_spending
+
+- story: banking question
+  steps:
+    - intent: ask_banking_question
+    - action: action_banking_gemini_fallback

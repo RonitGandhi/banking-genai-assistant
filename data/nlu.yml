@@ -1,0 +1,137 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good afternoon
+    - good evening
+    - hi there
+    - greetings
+    - hey there
+
+- intent: goodbye
+  examples: |
+    - goodbye
+    - bye
+    - see you later
+    - thanks bye
+    - thank you goodbye
+    - have a nice day
+    - talk to you later
+    - catch you later
+
+- intent: check_balance
+  examples: |
+    - what's my balance
+    - check my account balance
+    - how much money do I have
+    - show me my balance
+    - what's in my [checking](account_type) account
+    - balance of my [savings](account_type) account
+    - [credit card](account_type) balance
+    - [credit](account_type) card balance
+    - how much is in my account
+    - check balance for [checking](account_type)
+    - what's my [savings](account_type) balance
+    - what is my [checking](account_type) account balance
+    - what is my [checking](account_type) balance
+    - my [checking](account_type) account balance
+    - [checking](account_type) balance
+    - show [checking](account_type) balance
+    - what's my [checking](account_type) account balance
+    - I want to check my balance
+    - tell me my balance
+    - account balance
+    - what's the balance in my [checking](account_type)
+    - [checking](account_type) account balance
+    - balance [checking](account_type)
+    - my balance in [checking](account_type)
+    - whats the balance in my [checking](account_type) account
+    - show balance for [checking](account_type) account
+    - [checking](account_type) account balance please
+
+- intent: get_transactions
+  examples: |
+    - show my transactions
+    - recent transactions
+    - transaction history
+    - what are my recent transactions
+    - show me transactions from last [7](days) days
+    - transactions in the past [week](days)
+    - my spending history
+    - show purchases
+    - last [30](days) days transactions
+    - recent activity
+
+- intent: transfer_money
+  examples: |
+    - transfer money
+    - send money
+    - I want to transfer [500](amount) dollars
+    - transfer [1000](amount) from [checking](from_account) to [savings](to_account)
+    - move money to savings
+    - send [200](amount) to my [savings](to_account) account
+    - transfer funds
+    - wire money
+
+- intent: analyze_spending
+  examples: |
+    - analyze my spending
+    - spending analysis
+    - where am I spending money
+    - spending breakdown
+    - analyze my expenses
+    - spending patterns
+    - how much did I spend this month
+    - categorize my spending
+    - spending insights
+
+- intent: ask_about_account
+  examples: |
+    - tell me about my account
+    - account information
+    - what accounts do I have
+    - list my accounts
+    - account details
+    - my account summary
+
+- intent: report_fraud
+  examples: |
+    - report fraud
+    - suspicious activity
+    - unauthorized transaction
+    - I think my card was stolen
+    - someone used my card
+    - fraud alert
+    - report suspicious charge
+
+- intent: change_pin
+  examples: |
+    - change my PIN
+    - update PIN
+    - reset PIN
+    - change card PIN
+    - I want to change my PIN number
+
+- intent: request_statement
+  examples: |
+    - get my statement
+    - monthly statement
+    - bank statement
+    - download statement
+    - send me my statement
+    - account statement
+
+- intent: ask_banking_question
+  examples: |
+    - what is overdraft protection
+    - how do I set up direct deposit
+    - what are your interest rates
+    - how do I open a new account
+    - banking fees
+    - what is the minimum balance
+    - how do I close my account
+    - wire transfer information

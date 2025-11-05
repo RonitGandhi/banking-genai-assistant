@@ -1,0 +1,31 @@
+version: "3.1"
+rules:
+- rule: Say hello
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: Say goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Check balance
+  steps:
+    - intent: check_balance
+    - action: action_check_balance
+
+- rule: Get transactions
+  steps:
+    - intent: get_transactions
+    - action: action_get_transactions
+
+- rule: Analyze spending
+  steps:
+    - intent: analyze_spending
+    - action: action_analyze_spending
+
+- rule: Fallback rule
+  steps:
+    - intent: nlu_fallback
+    - action: action_banking_gemini_fallback

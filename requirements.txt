@@ -1,0 +1,8 @@
+rasa>=3.6.0,<3.8.0
+rasa-sdk>=3.6.0,<3.8.0
+fastapi
+uvicorn
+requests
+google-generativeai
+python-dotenv
+streamlit

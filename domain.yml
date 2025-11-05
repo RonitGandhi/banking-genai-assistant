@@ -1,0 +1,87 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - check_balance
+  - get_transactions
+  - transfer_money
+  - analyze_spending
+  - ask_about_account
+  - report_fraud
+  - change_pin
+  - request_statement
+  - ask_banking_question
+
+entities:
+  - account_type
+  - amount
+  - days
+  - from_account
+  - to_account
+
+slots:
+  account_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: account_type
+  amount:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: amount
+  days:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: days
+  from_account:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: from_account
+  to_account:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: to_account
+  transfer_amount:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: amount
+
+responses:
+  utter_greet:
+    - text: "Hello! I'm your banking assistant. How can I help you today?"
+    - text: "Hi there! I'm here to assist with your banking needs. What would you like to do?"
+    - text: "Welcome! How can I help you with your banking today?"
+  
+  utter_goodbye:
+    - text: "Thank you for banking with us. Have a great day!"
+    - text: "Goodbye! Stay secure and have a wonderful day!"
+    - text: "Take care! If you need anything else, I'm here to help."
+  
+  utter_ask_account_type:
+    - text: "Which account would you like to check? (checking, savings, or credit)"
+    - text: "Please specify the account type: checking, savings, or credit card."
+  
+  utter_ask_transfer_amount:
+    - text: "How much would you like to transfer?"
+    - text: "What amount do you want to transfer?"
+  
+  utter_ask_from_account:
+    - text: "Which account would you like to transfer from?"
+    - text: "From which account should I transfer the funds?"
+  
+  utter_ask_to_account:
+    - text: "Which account should I transfer to?"
+    - text: "Where would you like to transfer the funds?"
+
+actions:
+  - action_banking_gemini_fallback
+  - action_check_balance
+  - action_get_transactions
+  - action_analyze_spending
+  - action_transfer_money
